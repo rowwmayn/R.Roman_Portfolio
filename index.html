@@ -238,35 +238,8 @@ header {
   width: 100%;
   max-width: 320px;
   height: auto;
-  /* Retro tint */
-  filter: sepia(30%) hue-rotate(90deg) contrast(1.1) brightness(0.9);
+  /* Removed filter as requested */
   transition: filter 0.3s;
-}
-
-.monitor-wrapper:hover .monitor-screen img {
-  filter: sepia(0%) hue-rotate(0deg) contrast(1) brightness(1);
-}
-
-/* Scanning laser effect */
-.monitor-scanline {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: rgba(71, 255, 156, 0.5);
-  box-shadow: 0 0 10px var(--brand);
-  opacity: 0.6;
-  animation: scan 3s linear infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-
-@keyframes scan {
-  0% { top: -10%; opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.8; }
-  100% { top: 110%; opacity: 0; }
 }
 
 /* Badge on the monitor */
@@ -581,7 +554,7 @@ a[href="#top"] { text-decoration: underline; text-underline-offset: 3px; }
         <div class="reveal monitor-wrapper">
           <div class="monitor-frame">
             <div class="monitor-screen">
-              <div class="monitor-scanline"></div>
+              <!-- Scanline removed as requested -->
               <img src="profile.jpg" alt="R. Roman profile photo" onerror="this.src='https://placehold.co/400x400/121b13/47ff9c?text=IMG+ERROR'"/>
             </div>
           </div>
